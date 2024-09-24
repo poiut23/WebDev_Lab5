@@ -1,1 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+<head> 
+    <meta charset="utf-8">
+    <title> Volunteer Form </title> 
+</head>
+<body>
+    <h2> Volunteer Form </h2>
+    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
+    <fieldset> 
+        <legend> My Info </legend> 
+        <div>
+          <label> First name: 
+        <input size="100" type="text name"="first_name_field">
+        </label>
+        </div>
+        
+        <div>
+          <label> last name: 
+        <input size="100" type="text name"="last_name_field">
+        </label>
+        </div> 
+        
+        <div>
+          <label> phone: 
+        <input size="100" type="text name"="phone_field">
+        </label>
+        </div>
+        
+        <div>
+          <label> email: 
+        <input size="100" type="text name"="email_field">
+        </div>
+        </label>
+        
+        <div> 
+            Gender: 
+        </div> 
+          <label type="radio" name="gender_field" value="male"></label>
+          <!-- The type="radio" indicates that the input element is a radio button, which allows the user to select one option from a group-->
+          <!---The name attribute groups radio buttons together. If multiple radio buttons share the same name, only one of them can be selected at a time. In this case, it’s grouping radio buttons for the gender_field-->
+          <label type="radio" name="gender_field" value="female"></label>
+        <div>
+            Age:
+        </div>
+            <select name="age_field">
+              <option>under 18</option>
+              <option>over 18</option>
+            </select>
+           <!--<select>, This is a dropdown menu, allowing users to select one of the available options. The name="age_field" attribute is used to group the selected value for submission in a form. When the form is submitted, the value associated with the selected option will be sent with the name of "age_field".-->
+    </fieldset>
+    <fieldset> 
+        <legend> My Availablity </legend> 
+          <h3> Days Available:</h3>
+            <div>
+            <label> Sunday <input type="checkbox" name="Sunday_field[]" value="Sunday"></label>
+            </div>
+            <!--The <label> element is used to provide a clickable label for the input field. In this case, it wraps around the checkbox input, and the text "Sunday" is displayed next to the checkbox.
+            
+            type="checkbox": Specifies that this input is a checkbox. The user can either check (select) or uncheck (deselect) it.
+            
+            name="Sunday_field[]": The name attribute is used to group the data when the form is submitted. The [] (square brackets) after the name indicate that multiple checkboxes with the same name can be selected, and their values will be submitted as an array.-->
+            <div>
+            <label> Monday <input type="checkbox" name="Mondya_field[]" value="Monday"></label>
+            </div>
+            <div>
+            <label> Tuesday <input type="checkbox" name="Tuesday_field[]" value="Tuesday"></label>
+            </div>
+            <div>
+            <label> Wednesday <input type="checkbox" name="Wednesday_field[]" value="Wednesday"></label>
+            </div>
+            <div>
+            <label> Thursday <input type="checkbox" name="Thursday_field[]" value="Thursday"></label>
+            </div>
+            <div>
+            <label> Friday <input type="checkbox" name="Friday_field[]" value="Friday"></label>
+            </div>
+            <div>
+            <label> Saturday <input type="checkbox" name="Saturday_field[]" value="Saturday"></label>
+            </div>
+          <h3> Comments </h3> 
+          <textarea name="comments_field"></textarea>
+          <!-- <textarea name="comments_field"></textarea>:
 
+This creates a text area where the user can type in multiple lines of text, such as comments. The name="comments_field" attribute assigns a name to this field, so when the form is submitted, the text entered in the textarea will be sent as the value of the comments_field.-->
+        </fieldset>
+        <input type="hidden" name="hidden_field" value="hidden">
+        <input type="submit">
+        <!--Hidden inputs are often used to send data to the server that the user doesn't need to see or interact with. -->
+       </form> 
+</body>
+</html>
